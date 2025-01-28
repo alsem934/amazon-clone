@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LayOut from '../../Component/Layout/Layout';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from "axios";
 import { productUrl } from '../../Api/endpoint';
 import classes from './Results.module.css'; // Ensure this import is correct
 import ProductCard from '../../Component/Product/ProductCard'
