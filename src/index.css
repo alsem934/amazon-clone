@@ -9,4 +9,39 @@
     --primary-color: #febd69;
     --primary-shade: #d49644;
   }
-  
+  /* Default (for desktop) */
+body {
+  font-size: 16px;
+  display: flex;
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    flex-direction: column;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Modify layout for smaller screens */
+  .project-card {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 30%; /* Each card takes up 30% of the container width */
+  margin: 10px;
+}

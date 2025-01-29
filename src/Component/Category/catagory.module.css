@@ -41,3 +41,63 @@
   grid-template-columns: repeat(4 , 1fr);
   place-items: center;
 }
+.category {
+  width: 100%;
+  max-width: 300px; /* Set a max width for large screens */
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category p {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.category span h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+}
+
+.category a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+  .category {
+    width: 100%;
+    max-width: 100%; /* Full width on mobile */
+    padding: 10px;
+  }
+
+  .category span h2 {
+    font-size: 16px; /* Adjust font size on small screens */
+  }
+
+  .category p {
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+}

@@ -154,3 +154,62 @@ border-radius: 3px;
     display: none;
   }
 }
+/* Default styling for desktop and larger screens */
+body {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row; /* Default horizontal layout */
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.project-card {
+  width: 30%; /* Each card takes 30% of the width */
+  margin: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-content {
+  position: relative;
+  width: 100%; /* Ensures full width on smaller screens */
+}
+
+/* Mobile-specific styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .project-card {
+    width: 100%; /* Full width for each project card */
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column; /* Stack the projects vertically */
+  }
+
+  .portfolio-info {
+    padding: 15px;
+    opacity: 1;
+    position: relative; /* Reset absolute position for small screens */
+  }
+
+  .portfolio-info h4, .portfolio-info p {
+    font-size: 16px;
+  }
+}
